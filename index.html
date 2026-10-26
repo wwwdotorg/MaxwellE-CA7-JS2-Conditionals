@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Maxwell Edegbe">
+
+    <title>Game</title>
+  </head>
+  <body>
+    <script>
+        let name = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started:');
+        let response = `You have entered: ${name}`; 
+        alert(`Hey ${name}, Let's Play!!`);
+        let result = prompt('Who are you, Bear, Ninja, Hunter?');
+        let compChoice = "Bear";
+        let combination = 0;
+        if(result == "Bear" && compChoice == "Bear"){
+          combination = 1;
+        }
+        if(result == "Ninja" && compChoice == "Ninja"){
+          combination = 2;
+        }
+        if(result == "Hunter" && compChoice == "Hunter"){
+          combination = 3;
+        }
+        if(result == "Bear" && compChoice == "Ninja"){
+          combination = 4;
+        }
+        if(result == "Ninja" && compChoice == "Hunter"){
+          combination = 5;
+        }
+        if(result == "Hunter" && compChoice == "Bear"){
+          combination = 6;
+        }
+        if(result == "Hunter" && compChoice == "Ninja"){
+          combination = 7;
+        }
+        if(result == "Bear" && compChoice == "Hunter"){
+          combination = 8;
+        }
+        if(result == "Ninja" && compChoice == "Bear"){
+          combination = 9;
+        }
+        let success = "";
+        
+          switch(combination){
+            case 1 :
+              success = "Tie";
+              break;
+            case 2:
+              success = "Tie";
+              break;
+            case 3:
+              success = "Tie";
+              break;
+            case 4:
+              success = "You won!!";
+              break;
+            case 5:
+              success = "You won!!";
+              break;
+            case 6:
+              success = "You won!!";
+              break;
+            case 7:
+              success = "Computer won";
+              break;
+            case 8:
+              success = "Computer won";
+              break;
+            case 9:
+              success = "Computer won";
+              break;  
+            default:
+              success = "invalid or lowercase";  
+          }
+    </script>
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+        <script>
+          let message1 = name +`, you picked ${result}!`;
+          let message2 = "The computer picked " + `${compChoice}` + "!";
+          let message3 = success;
+          document.getElementById("output1").textContent = message1;
+          document.getElementById("output2").textContent = message2;
+          document.getElementById("output3").textContent = message3;
+          console.log(message1);
+          console.log(message2);
+          console.log(message3);
+
+        </script>
+    
+  </body>
+</html>
