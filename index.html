@@ -13,8 +13,8 @@
     creating the values to be passed as messages. -->
     <script>
         let name = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started:');
-        alert(`Hey ${name}, Let's Play!!`);
-        let result = prompt('Who are you, Bear, Ninja, or Hunter?');
+        alert(`Hi ${name}, Let\'s Play!!`);
+        let result = prompt('Who are you: Bear, Ninja, or Hunter?');
         // Hardcoded computer choice
         let compChoice = "Bear";
 
@@ -96,12 +96,12 @@
           both the user and computer while also sending the same message both on the console
           and on the html page -->
         <script>
-          let message1 = name +`, you picked ${result}!`;
+          let message1 = name +`, You picked ${result}!`;
           let message2 = "The computer picked " + `${compChoice}` + "!";
           let message3 = success;
-          document.getElementById("output1").textContent = message1;
-          document.getElementById("output2").textContent = message2;
-          document.getElementById("output3").textContent = message3;
+          document.getElementById("output1").innerText = message1;
+          document.getElementById("output2").innerText = message2;
+          document.getElementById("output3").innerText = message3;
           console.log(message1);
           console.log(message2);
           console.log(message3);
